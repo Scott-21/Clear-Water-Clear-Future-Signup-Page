@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up - Clear Water, Clear Future</title>
+</head>
+<body>
+
+<h1>Clear Water, Clear Future - Sign Up</h1>
+<p>Fill out the form below to join our advocacy!</p>
+<hr>
+
+<form id="signupForm" onsubmit="return validateForm()">
+
+  <h3>Personal Information</h3>
+
+  Full Name:<br>
+  <input type="text" id="fullName" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br>
+  <span id="nameError" style="color:red;"></span><br>
+
+  Birthdate:<br>
+  <input type="date" id="birthdate" onchange="checkAge(this)"><br>
+  <span id="bdayError" style="color:red;"></span><br>
+
+  Sex:<br>
+  <input type="radio" name="sex" value="male"> Male
+  <input type="radio" name="sex" value="female"> Female
+  <input type="radio" name="sex" value="other"> Prefer not to say<br>
+  <span id="sexError" style="color:red;"></span><br>
+
+  Email:<br>
+  <input type="email" id="email" onfocus="highlightField(this)" onblur="unhighlightField(this)" onchange="liveEmailCheck(this)"><br>
+  <span id="emailError" style="color:red;"></span><br>
+
+  <h3>Account Details</h3>
+
+  Username:<br>
+  <input type="text" id="username" onfocus="highlightField(this)" onblur="unhighlightField(this)" onselect="showTip('usernameTip')"><br>
+  <span id="usernameTip" style="color:blue; font-size:12px; display:none;">Only letters and numbers, no spaces or symbols.</span>
+  <span id="userError" style="color:red;"></span><br><br>
+
+  Password:<br>
+  <input type="password" id="password" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br>
+  <span id="passError" style="color:red;"></span><br>
+
+  Confirm Password:<br>
+  <input type="password" id="confirmPass" onfocus="highlightField(this)" onblur="unhighlightField(this)"><br>
+  <span id="confirmError" style="color:red;"></span><br>
+
+  <h3>Your Water Habits</h3>
+
+  What is your biggest water concern?<br>
+  <select id="concern" onchange="highlightField(this)">
+    <option value="">-- choose --</option>
+    <option value="scarcity">Water Scarcity</option>
+    <option value="pollution">Water Pollution</option>
+    <option value="sanitation">Lack of Sanitation</option>
+    <option value="flooding">Flooding & Contamination</option>
+    <option value="access">Unequal Access to Clean Water</option>
+  </select><br>
+  <span id="concernError" style="color:red;"></span><br>
+
+  Which water-saving habits do you practice? (select all that apply)<br>
+  <input type="checkbox" name="habits" value="shorter_showers"> Taking shorter showers<br>
+  <input type="checkbox" name="habits" value="turn_off_tap"> Turning off the tap while brushing teeth<br>
+  <input type="checkbox" name="habits" value="rainwater"> Collecting rainwater<br>
+  <input type="checkbox" name="habits" value="fix_leaks"> Reporting or fixing leaks<br>
+  <input type="checkbox" name="habits" value="educate"> Educating others about water conservation<br>
+  <span id="habitsError" style="color:red;"></span><br>
+
+  How often do you think about water waste?<br>
+  <input type="radio" name="awareness" value="always"> Always
+  <input type="radio" name="awareness" value="sometimes"> Sometimes
+  <input type="radio" name="awareness" value="rarely"> Rarely
+  <input type="radio" name="awareness" value="never"> Never<br>
+  <span id="awarenessError" style="color:red;"></span><br>
+
+  <input type="submit" value="Join Us and Save Our Water!">
+  <p><span id="successMsg" style="color:green; font-weight:bold;"></span></p>
+
+</form>
+
+<hr>
+<p><a href="index.html">Back to Homepage</a></p>
+<p>Together for Clean Water - Clear Water, Clear Future</p>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</body>
+</html>

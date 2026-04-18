@@ -1,0 +1,50 @@
+/* styling for background nd adding colors in general */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9faff;
+  color: #00334e;
+  margin: 18px;
+}
+
+header, .headerr {
+  background-color: #0096c7;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  color: #023e8a;
+}
+
+a {
+  color: #0077b6;
+}
+
+a:hover {
+  color: #023e8a;
+}
+
+.button {
+  background-color: #0077b6;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.nav a {
+  color: white;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #0096c7;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+}
